@@ -1,0 +1,22 @@
+/* Estilo para cada formulário */
+.formulario {
+    position: absolute;
+    top: 50;
+    left: 0;
+    width: 100%; /* Largura total */
+    background: #f4f4f4; /* Cor de fundo dos formulários */
+    padding: 20px; /* Espaçamento interno nos formulários */
+    opacity: 1; /* Defina a opacidade padrão para 1 (totalmente visível) */
+    transition: opacity 0.5s; /* Adicione uma transição suave para a mudança de opacidade */
+  }
+  
+  /* Adicione uma classe para ocultar os formulários */
+  .formulario-hidden {
+    opacity: 0;
+    pointer-events: none; /* Evite interações com formulários ocultos */
+  }
+
+.red{
+    color: red;
+    position: absolute;
+}
