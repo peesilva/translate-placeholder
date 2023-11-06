@@ -1,13 +1,8 @@
 /* Estilo para cada formulário */
 .formulario {
     position: absolute;
-    top: 50;
-    left: 0;
     width: 100%; /* Largura total */
     background: #f4f4f4; /* Cor de fundo dos formulários */
-    padding: 20px; /* Espaçamento interno nos formulários */
-    opacity: 1; /* Defina a opacidade padrão para 1 (totalmente visível) */
-    transition: opacity 0.5s; /* Adicione uma transição suave para a mudança de opacidade */
   }
   
   /* Adicione uma classe para ocultar os formulários */
@@ -19,4 +14,109 @@
 .red{
     color: red;
     position: absolute;
+}
+
+
+section.formulario {
+  padding: 80px 4%;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  background-color: rgba(160, 147, 147, 0.225);
+  border: 0;
+  outline: 0;
+  padding: 20px 15px;
+  border-radius: 15px;
+  color: white;
+  font-size: 16px;
+}
+
+form textarea {
+  resize: none;
+  max-width: 500px;
+}
+
+form .btn-enviar {
+  margin-top: 15px;
+  text-align: center;
+}
+
+form .btn-enviar input[type=submit] {
+  width: 120px;
+  background-color: #00ff06;
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+
+
+
+.toggle-language {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 30px; /* Remova margens */
+}
+
+
+.toggle-language .lingua{
+  color: black;
+  margin: 5px;
+  text-align: center;
+ 
+}
+
+.toggle-language {
+  display: inline-block;
+}
+
+.toggle-language input[type="checkbox"] {
+  display: none;
+}
+
+.toggle {
+  width: 60px;
+  height: 30px;
+  padding: 0px;
+  border-radius: 30px;
+  background-color: #00ff06;
+  transition: all 0.2s ease 0s;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
+.toggle-ball {
+  width: 30px; /* Tamanho da bolinha */
+  height: 30px; /* Tamanho da bolinha */
+  background-color: #000000; /* Cor da bolinha */
+  border-radius: 50%; /* Forma arredondada da bolinha */
+  position: absolute;
+  transition: transform 0.3s; /* Efeito de transição suave ao mover a bolinha */
+  border: 2px solid rgb(245, 245, 239);
+  box-shadow: rgba(0, 0, 0, 0.41) 0px 1px 6px 1px;
+}
+
+/* Estilize o botão de alternância para o idioma desejado */
+#language-switch:checked + .toggle .toggle-ball {
+  transform: translateX(30px); /* Move a bolinha para a direita (ativado) */
+}
+
+/* Estilize o botão de alternância para o idioma alternativo (invertido) */
+#language-switch + .toggle .toggle-ball {
+  transform: translateX(0); /* Move a bolinha de volta para a esquerda (desativado) */
 }
